@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say Hello</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}">
+</head>
+<body>
+    <img src="https://www.seekpng.com/png/detail/190-1906563_say-hello-logo-hello.png">
+    <br>
+    <form action="greet" method="post">
+        {% for message in get_flashed_messages()%}
+            <p> {{message}} </p>
+        {% endfor %}    
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="GREET" id="greet">
+    </form>
+   <br>
+    <button= onclick="document.location='predict'" style= "cursor:pointer; background-color: turquoise; border: none; border-radius: 5px; font-size: 20px; font-weight:bold; color:whitesmoke; /* Dark grey */ padding: 15px 32px">Flight Fare Prediction</button>
+</body>
+</html>
