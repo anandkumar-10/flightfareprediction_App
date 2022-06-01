@@ -10,7 +10,7 @@ app=Flask(__name__)
 app.secret_key= "Anand_Kumar17"
 model = pickle.load(open("flight_rf.pkl", "rb"))
 
-@app.route("/")
+@app.route("/hello")
 def index():
     flash("What's your name?")
     return render_template("index.html")
@@ -21,7 +21,7 @@ def greet():
     return render_template("index.html")
 
 
-@app.route("/")
+@app.route("/home")
 @cross_origin()
 def home():
     return render_template("home.html")
